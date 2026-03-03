@@ -1,0 +1,1 @@
+export const API_VERSION = process.env.SANITY_STUDIO_API_VERSION || '2024-03-02';
