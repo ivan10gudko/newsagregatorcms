@@ -19,7 +19,10 @@ export default defineType({
             name: 'keywords',
             title: 'Keywords',
             type: 'array',
-            of: [{ type: 'string' }],
+            of: [
+                { type: 'string',
+                    validation: (Rule) => Rule.required().min(2).error('Keyword can\'t be empty')
+                }],
             description: 'Words to search for in news titles (e.g., apple, react, frontend)',
             validation: (Rule) => Rule
                 .required()
